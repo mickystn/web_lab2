@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <form action="" id="form">
+            <h1>แบบฟอร์มจองทัวร์</h1>
+            <fieldset>
+                <legend>ข้อมูลทั่วไป</legend>
+                ชื่อ-สกุล:<br>
+                <input type="text" placeholder="กรอกชื่อ-สกุล" required>*<br>
+                Email:<br>
+                <input type="email" required>*<br>
+                โทรศัพท์:<br>
+                <input type="text" value="+66" pattern="+66[0-9]{9}" required>*<br>
+                <label for="w3review">ที่อยู่</label><br>
+                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea><br>
+                รหัสไปรษณีย์:<br>
+                <input type="ืnumber" pattern="[0-9]{5}"><br>
+                รูปผู้จอง
+                <input type="file"><br>
+            </fieldset>
+            <fieldset>
+                <legend>ข้อมูลเข้าระบบ</legend>
+                Username:<br>
+                <input type="text" pattern="[_A-Xa-z0-9]{8,}"><br>
+                Password:<br>
+                <input type="password" pattern="[A-Xa-z0-9]{8,}"><br>
+            </fieldset>
+            <fieldset>
+                <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+                แพคเก็จทัวร์:
+                <select name="tours" id="tours" form="form">
+                    <option select="selected">--select--</option>
+                    <option value="th">Thailand</option>
+                    <option value="la">Laos</option>
+                    <option value="jp">Japan</option>
+                    <option value="kr">Korea</option>
+                    <option value="uk">England</option>
+                </select><br>
+                วันที่เดินทาง:
+                <input type="date" required><br>
+                จำนวนผู้เดินทาง:
+                <input type="text" pattern="[1-10]" required><br>
+                เน้นการท่องเที่ยวแบบใด?<br>
+                <input type="checkbox" id="shopping" name="shopping" value="shop">
+                <label for="shopping"> ช้อปปิ้ง</label><br>
+                <input type="checkbox" id="natural" name="natural" value="natural">
+                <label for="natural"> ธรรมชาติ</label><br>
+                <input type="checkbox" id="beach" name="beach" value="beach">
+                <label for="beach"> ทะเล</label><br>
+            </fieldset>
+            <span>ยอมรับเงื่อนไขข้อตกลง
+                <input type="radio" id="agree" name="fav_language" value="agree">
+                <label for="agree">I agree</label>
+                <input type="radio" id="disagree" name="fav_language" value="disagree">
+                <label for="disagree">I disagree</label>
+                <input type="submit" value="จอง">
+            </span>
+            
+        </form>
+</body>
+</html>
